@@ -6,7 +6,12 @@ namespace CloudWeather.Precipitation.DataAccess
     {
         public PrecipDbContext() { }
 
-        public PrecipDbContext(DbContextOptions opts) : base(opts) { }
+
+        public PrecipDbContext(DbContextOptions<PrecipDbContext> options) : base(options)
+        {
+
+        }
+
 
         public DbSet<Precipitation> Precipitation { get; set; }
 
