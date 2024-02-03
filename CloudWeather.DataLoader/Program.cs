@@ -93,8 +93,9 @@ void postPrecip(int lowTemp, string zip, DateTime day, HttpClient httpclient)
 
     }
 
-    var precipResponse = precipitationHttpClient.
+    var precipResponse = httpclient.
         PostAsJsonAsync("observation", precipitation).Result;
+
 
     if (precipResponse.IsSuccessStatusCode)
     {
@@ -102,7 +103,7 @@ void postPrecip(int lowTemp, string zip, DateTime day, HttpClient httpclient)
                       $"Zip: {zip}" +
                       $"Type: {precipitation.WeatherType}" +
                       $"Amount: {precipitation.AmountInches}");
-    };
+    }
 }
 
 List<int> PostTemp(string zip, DateTime day, HttpClient httpclient)
