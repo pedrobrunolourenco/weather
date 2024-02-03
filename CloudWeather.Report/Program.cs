@@ -24,6 +24,8 @@ builder.Services.AddDbContext<WeatherReportDbContext>
 
 var app = builder.Build();
 
+// exemplo de uma chamado desse get abaixo
+// http://localhost:5000/weather-report/19717?days=10
 
 app.MapGet("/weather-report/{zip}",
            async (string zip,
