@@ -7,7 +7,7 @@ WORKDIR /src
 COPY ["CloudWeather.Temperature/CloudWeather.Temperature.csproj", "CloudWeather.Temperature/"]
 COPY ["CloudWeather.Precipitation/CloudWeather.Precipitation.csproj", "CloudWeather.Precipitation/"]
 COPY ["CloudWeather.Report/CloudWeather.Report.csproj", "CloudWeather.Report/"]
-COPY ["CloudWeather.Report/CloudWeather.DataLoader.csproj", "CloudWeather.DataLoader/"]
+COPY ["CloudWeather.DataLoader/CloudWeather.DataLoader.csproj", "CloudWeather.DataLoader/"]
 RUN dotnet restore "./CloudWeather.Temperature/./CloudWeather.Temperature.csproj"
 RUN dotnet restore "./CloudWeather.Precipitation/./CloudWeather.Precipitation.csproj"
 RUN dotnet restore "./CloudWeather.Report/./CloudWeather.Report.csproj"
